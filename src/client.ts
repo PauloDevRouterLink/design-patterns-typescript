@@ -1,5 +1,5 @@
 export default class Client {
-  email: string;
+  email!: string;
 
   create(): void {}
 
