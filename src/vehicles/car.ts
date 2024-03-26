@@ -1,4 +1,4 @@
-import IVehicleCar from "../interfaces/vehicles-car";
+import IVehicleCar from '../interfaces/vehicles-car'
 
 export default class Car implements IVehicleCar {
   constructor(
@@ -6,13 +6,13 @@ export default class Car implements IVehicleCar {
     year: number,
     engine: number,
     seats: number,
-    doors: number
+    doors: number,
   ) {
     this.configure(color, year, engine, seats, doors)
   }
 
   startVehicle(): void {
-    console.log('ligando os motores.');
+    console.log('ligando os motores.')
   }
 
   configure(
@@ -20,12 +20,12 @@ export default class Car implements IVehicleCar {
     year: number,
     engine: number,
     seats: number,
-    doors: number
+    doors: number,
   ): void {
     console.log(`
       Criando um carro: ${color}, ${year}, ${engine} potência ${doors} portas com ${seats} assentos.
     `)
 
-    this.startVehicle();
+    this.startVehicle()
   }
 }

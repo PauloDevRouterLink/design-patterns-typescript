@@ -1,31 +1,23 @@
-import { TYPE_VEHICLE } from "./types-vehicle";
-import MotoCycle from "./vehicles/moto-cycle";
-import Car from "./vehicles/car";
-import CreditCard from "./credit-card";
-import DebitCard from "./debit-card";
-import NubankRewards from "./nubank-rewards";
+import Car from './car'
+import CreditCard from './credit-card'
+import DebitCard from './debit-card'
+import NubankRewards from './nubank-rewards'
+import Moto from './moto'
 
-const type = TYPE_VEHICLE.CAR;
-let vehicle;
-
-if (type === TYPE_VEHICLE.CAR) {
-  vehicle = new Car('Amarelo', 2022, 2.0, 4, 4);
-} else if (type === TYPE_VEHICLE.MOTO_CYCLE) {
-  vehicle = new MotoCycle('Amarelo', 2022, 2.0);
-}
-
-console.log("<== ============================= ==>");
-
-const card = new CreditCard();
+const card = new CreditCard()
 card.validate()
 card.collectPayment()
 
-console.log("<== ============================= ==>");
-const debit_card = new DebitCard();
-debit_card.validate()
-debit_card.collectPayment()
+console.log('<== ============================= ==>')
+const debitCard = new DebitCard()
+debitCard.validate()
+debitCard.collectPayment()
 
-console.log("<== ============================= ==>");
-const nubank = new NubankRewards();
+console.log('<== ============================= ==>')
+const nubank = new NubankRewards()
 nubank.validate()
 nubank.collectPayment()
+
+console.log('<== ============================= ==>')
+const vehicle = new Car('Amarelo', 202, 2.6, 4)
+const motoCycle = new Moto('Branca', 2022, 250)

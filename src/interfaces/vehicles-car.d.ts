@@ -1,12 +1,24 @@
+import IVehicle from './vehicle'
+
+export interface IVehicleCarProps extends IVehicle {
+  configurationCar(
+    color: string,
+    year: number,
+    engine: number,
+    seats: number,
+    doors: number,
+  ): void
+}
+
 interface IVehicleCar {
-  startVehicle(): void;
+  startVehicle(): void
   configure(
     color: string,
     year: number,
     engine: number,
     seats: number,
     doors: number,
-  ): void;
+  ): void
 }
 
 export default IVehicleCar

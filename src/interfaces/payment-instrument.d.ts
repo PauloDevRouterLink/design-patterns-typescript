@@ -1,6 +1,6 @@
 interface IPaymentInstrument {
-  validate(): void;
-  collectPayment(): void;
+  validate(): void
+  collectPayment(): void
 }
 
 export default IPaymentInstrument
