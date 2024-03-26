@@ -1,5 +1,4 @@
-import IVehicle from './vehicle'
-export interface IVehicleMotoCycleProps extends IVehicle {
+export interface IVehicleMotoCycleProps {
   configurationMotoCycle(color: string, year: number, engine: number): void
 }
 

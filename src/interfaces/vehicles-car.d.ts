@@ -1,6 +1,4 @@
-import IVehicle from './vehicle'
-
-export interface IVehicleCarProps extends IVehicle {
+export interface IVehicleCarProps {
   configurationCar(
     color: string,
     year: number,

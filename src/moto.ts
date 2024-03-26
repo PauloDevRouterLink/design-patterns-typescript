@@ -1,6 +1,7 @@
 import { IVehicleMotoCycleProps } from './interfaces/vehicles-moto-cycle'
+import IVehicle from './interfaces/vehicle'
 
-export default class Moto implements IVehicleMotoCycleProps {
+export default class Moto implements IVehicleMotoCycleProps, IVehicle {
   constructor(color: string, year: number, engine: number) {
     this.configurationMotoCycle(color, year, engine)
   }
@@ -10,9 +11,9 @@ export default class Moto implements IVehicleMotoCycleProps {
   }
 
   configurationMotoCycle(color: string, year: number, engine: number): void {
-    console.log(`
-      Uma moto da cor ${color}, do ano ${year} com ${engine} cilindrada.
-    `)
+    console.log(
+      ` Uma moto da cor ${color}, do ano ${year} com ${engine} cilindrada.`,
+    )
 
     this.startVehicle()
   }

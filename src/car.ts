@@ -1,6 +1,7 @@
+import IVehicle from './interfaces/vehicle'
 import { IVehicleCarProps } from './interfaces/vehicles-car'
 
-export default class Car implements IVehicleCarProps {
+export default class Car implements IVehicleCarProps, IVehicle {
   constructor(color: string, year: number, engine: number, seats: number) {
     this.configurationCar(color, year, engine, seats)
   }
