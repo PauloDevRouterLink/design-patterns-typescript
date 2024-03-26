@@ -1,10 +1,10 @@
 interface IVehicleMotoCycle {
-  startVehicle: () => void;
-  configure: (
+  startVehicle(): void;
+  configure(
     color: string,
     year: number,
     engine: number
-  ) => void;
+  ): void;
 }
 
 export default IVehicleMotoCycle
