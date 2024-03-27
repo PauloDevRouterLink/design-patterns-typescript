@@ -1,22 +1,25 @@
-import BikeTransport from './transport/bike-transport'
-import CarTransport from './transport/car-transport'
-import MotoCycleTransport from './transport/moto-cycle-transport'
-import Transport from './transport/transport'
+import Client from './uber-transport/client/client'
+import { Company } from './uber-transport/constants'
+import { ITransportFactory } from './uber-transport/factory/interfaces'
+import NineNineTransport from './uber-transport/factory/nine-nine-transport'
+import UberTransport from './uber-transport/factory/uber-transport'
 
-declare let process
+const currentCompany = Company.UBER
+let factory: ITransportFactory
 
-let transport: Transport
+switch (currentCompany) {
+  case Company.UBER:
+    factory = new UberTransport()
+    break
 
-if (process.argv.includes('--uber')) {
-  transport = new CarTransport()
-} else if (process.argv.includes('--log')) {
-  transport = new MotoCycleTransport()
-} else if (process.argv.includes('--bike')) {
-  transport = new BikeTransport()
-} else {
-  console.log('Selecione o tipo de entrega!')
+  case Company.NINE_NINE:
+    factory = new NineNineTransport()
+    break
+
+  default:
+    console.log('Companhia desconhecida')
 }
 
-if (transport) {
-  transport.startTransport()
-}
+const client = new Client(factory)
+
+client.startRoute()
