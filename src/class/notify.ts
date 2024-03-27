@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-constructor */
+/* eslint-disable no-unused-expressions */
 import Client from './client'
 
 export default class Notify {

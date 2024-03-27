@@ -1,5 +1,5 @@
-import { IVehicleMotoCycleProps } from './interfaces/vehicles-moto-cycle'
-import IVehicle from './interfaces/vehicle'
+import { IVehicleMotoCycleProps } from '../interfaces/vehicles-moto-cycle'
+import IVehicle from '../interfaces/vehicle'
 
 export default class Moto implements IVehicleMotoCycleProps, IVehicle {
   constructor(color: string, year: number, engine: number) {

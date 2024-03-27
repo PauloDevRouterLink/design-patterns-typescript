@@ -1,4 +1,4 @@
-import IPaymentInstrument from './interfaces/payment-instrument'
+import IPaymentInstrument from '../interfaces/payment-instrument'
 
 export default class NubankRewards implements IPaymentInstrument {
   validate(): void {

@@ -1,5 +1,5 @@
-import IVehicle from './interfaces/vehicle'
-import { IVehicleCarProps } from './interfaces/vehicles-car'
+import IVehicle from '../interfaces/vehicle'
+import { IVehicleCarProps } from '../interfaces/vehicles-car'
 
 export default class Car implements IVehicleCarProps, IVehicle {
   constructor(color: string, year: number, engine: number, seats: number) {

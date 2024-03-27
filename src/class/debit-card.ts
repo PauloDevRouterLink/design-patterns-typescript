@@ -1,4 +1,4 @@
-import NubankCard from './nubank-card/nubank-card'
+import NubankCard from '../nubank-card/nubank-card'
 
 export default class DebitCard extends NubankCard {
   validate(): void {
